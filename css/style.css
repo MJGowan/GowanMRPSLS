@@ -1,0 +1,39 @@
+body{
+    background-image: url("../assets/s.jpg");
+}
+.navbar{
+    background-color:#7688b1;
+}
+.navbar-brand{
+    color:white;
+    font-weight:bold;
+    font-size: xx-large;
+}
+.allBtn{
+    background-color:#7688b1;
+    color: #021827;
+    width:150px;
+    height:60px;
+    border-radius: 15px;
+    font-weight:bold;
+}
+.subBtn{
+    color:white;
+    border-color:white;
+}
+.explainTxt{
+    color: #7688b1;
+    text-shadow: 1px 1px 1px #000, 2px 2px 1px #000, 3px 3px 1px #000, 4px 4px 1px #000, 5px 5px 1px #000;
+}
+.btnBoxTop{
+    margin-right:-100px;
+    margin-top: -370px;
+}
+.btnBox{
+    margin-right:-410px;
+    margin-top:20px;
+}
+.btnBoxBottom{
+    margin-right:-615px;
+    margin-top:60px;
+}

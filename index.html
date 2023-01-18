@@ -1,13 +1,91 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>RPSLS</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-  </head>
-  <body>
-    <h1>Hello, world!</h1>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RPSLS</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <!--CPU or 2 player, AND how many rounds-->
+  <div id="startPage" class="container-fluid">
+    <nav class="navbar">
+      <div class="container-fluid d-flex justify-content-center">
+        <a id="navTitle" class="navbar-brand" href="#">RPSLS</a>
+      </div>
+    </nav>
+    <br>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-6">
+          <p class="explainTxt">In this game, you can choose to play against CPU, or do a two player PVP game. You can
+            play 1 round, best 3 out of 5 rounds, or best 4 out of 7 rounds. There have been two changes to the game,
+            making it unlike your typical rock-paper-scissors. Now you can choose between rock, paper, scissors,
+            lizard, and spock.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-4">
+          <p class="explainTxt">Scissors cut paper.</p>
+          <p class="explainTxt">Paper covers rock.</p>
+          <p class="explainTxt">Rock crushes lizard.</p>
+          <p class="explainTxt">Lizard poisons Spock.</p>
+          <p class="explainTxt">Spock smashes scissors.</p>
+          <p class="explainTxt">Scissors decapitates lizard.</p>
+          <p class="explainTxt">Lizard eats paper.</p>
+          <p class="explainTxt">Paper disproves Spock.</p>
+          <p class="explainTxt">Spock vaporizes rock.</p>
+          <p class="explainTxt">Rock crushes scissors.</p>
+        </div>
+      </div>
+      <div class="container-fluid btnBoxTop">
+        <div class="row">
+        <div class="col-4"></div>
+        <div class="col-2">
+          <button id="cpuBtn" type="button" class="allBtn">CPU</button>
+        </div>
+        <div class="col-2">
+          <button id="pvpBtn" type="button" class="allBtn">PVP</button>
+        </div>
+        </div>
+      </div>
+    
+      <br>
+      <br>
+      
+    <div class="container-fluid btnBox">
+      <div class="row">
+      <div class="col-2">
+        <button id="oneBtn" type="button" class="allBtn">1 ROUND</button>
+      </div>
+      <div class="col-2">
+        <button id="fiveBtn" type="button" class="allBtn">5 ROUNDS</button>
+      </div>
+      <div class="col-2">
+        <button id="sevenBtn" type="button" class="allBtn">7 ROUNDS</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid btnBoxBottom">
+    <div class="row">
+      <div class="col-2">
+        <button id="submitBtn" type="button" class="allBtn subBtn">SUBMIT</button>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+  </div>
+  <script src="./scripts/app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>
