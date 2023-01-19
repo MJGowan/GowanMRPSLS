@@ -37,6 +37,7 @@ body {
 .explainTxt {
     color: #afb8cf;
     text-shadow: 1px 1px 1px #000, 2px 2px 1px #000, 3px 3px 1px #000, 4px 4px 1px #000, 5px 5px 1px #000;
+    font-size:large;
 }
 
 .btnBoxTop {
@@ -67,7 +68,7 @@ body {
     margin-top:-225px;
     margin-left:650px;
     background-color:#efd2d2;
-    opacity:1%;
+    opacity:50%;
 }
 
 .paperBtn {
@@ -78,7 +79,7 @@ body {
     margin-top:-475px;
     margin-left:725px;
     background-color:#fffddd;
-    opacity:1%;
+    opacity:50%;
 }
 
 .scissorsBtn {
@@ -89,7 +90,7 @@ body {
     margin-top:-625px;
     margin-left:512px;
     background-color:#fed3ff;
-    opacity:1%;
+    opacity:50%;
 }
 
 .lizardBtn {
@@ -100,7 +101,7 @@ body {
     margin-top:-220px;
     margin-left:390px;
     background-color:#d5f1d5;
-    opacity:1%;
+    opacity:50%;
 }
 
 .spockBtn {
@@ -111,7 +112,7 @@ body {
     margin-top:-470px;
     margin-left:310px;
     background-color:#dde9ff;
-    opacity:1%;
+    opacity:50%;
 }
 .scoreDiv{
     color:#afb8cf;
