@@ -1,42 +1,110 @@
-body{
+body {
     background-image: url("../assets/s.jpg");
 }
-.navbar{
-    background-color:#7688b1;
+
+.navbar {
+    background-color: #7688b1;
 }
-.navbar-brand{
-    color:white;
+
+.navbar-brand {
+    color: white;
     text-shadow: 1px 1px 1px #021827, 2px 2px 1px #021827, 3px 3px 1px #021827, 4px 4px 1px #021827, 5px 5px 1px #021827;
-    font-weight:bold;
+    font-weight: bold;
     font-size: xx-large;
 }
-.allBtn{
-    background-color:#021827;
-    color: #7688b1;
-    width:150px;
-    height:60px;
+
+.allBtn {
+    background-color: #021827;
+    color: #afb8cf;
+    width: 150px;
+    height: 60px;
     border-radius: 15px;
-    font-weight:bold;
-    border-color:#7688b1;
+    font-weight: bold;
+    border-color: #7688b1;
 }
-.subBtn{
-    background-color:#7688b1;
-    color:white;
-    border-color:white;
+
+.subBtn {
+    background-color: #7688b1;
+    color: white;
+    border-color: white;
 }
-.explainTxt{
-    color: #7688b1;
+
+.explainTxt {
+    color: #afb8cf;
     text-shadow: 1px 1px 1px #000, 2px 2px 1px #000, 3px 3px 1px #000, 4px 4px 1px #000, 5px 5px 1px #000;
 }
-.btnBoxTop{
-    margin-right:-10px;
+
+.btnBoxTop {
+    margin-right: -455px;
     margin-top: -375px;
 }
-.btnBox{
-    margin-right:-325px;
-    margin-top:20px;
+
+.btnBox {
+    margin-right: -390px;
+    margin-top: -250px;
 }
-.btnBoxBottom{
-    margin-right:-530px;
-    margin-top:70px;
+
+.btnBoxBottom {
+    margin-right: -530px;
+    margin-top: -125px;
+}
+
+.rpslsImg {
+    padding-left: 300px;
+    padding-right: 300px;
+}
+
+.rockBtn {
+    position:absolute;
+    height: 180px;
+    width: 180px;
+    border-radius: 100px;
+    margin-top:-225px;
+    margin-left:650px;
+    background-color:#efd2d2;
+    opacity:1%;
+}
+
+.paperBtn {
+    position:absolute;
+    height: 180px;
+    width: 180px;
+    border-radius: 100px;
+    margin-top:-475px;
+    margin-left:725px;
+    background-color:#fffddd;
+    opacity:1%;
+}
+
+.scissorsBtn {
+    position:absolute;
+    height: 180px;
+    width: 180px;
+    border-radius: 100px;
+    margin-top:-625px;
+    margin-left:512px;
+    background-color:#fed3ff;
+    opacity:1%;
+}
+
+.lizardBtn {
+    position:absolute;
+    height: 180px;
+    width: 180px;
+    border-radius: 100px;
+    margin-top:-220px;
+    margin-left:390px;
+    background-color:#d5f1d5;
+    opacity:1%;
+}
+
+.spockBtn {
+    position:absolute;
+    height: 180px;
+    width: 180px;
+    border-radius: 100px;
+    margin-top:-470px;
+    margin-left:310px;
+    background-color:#dde9ff;
+    opacity:1%;
 }

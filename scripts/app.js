@@ -9,20 +9,25 @@ let sevenBtn = document.getElementById("sevenBtn");
 let subStartBtn = document.getElementById("subStartBtn");
 
 cpuBtn.addEventListener("click", function(){
-
+    
 });
+
 pvpBtn.addEventListener("click", function(){
     
 });
+
 oneBtn.addEventListener("click", function(){
     
 });
+
 fiveBtn.addEventListener("click", function(){
     
 });
+
 sevenBtn.addEventListener("click", function(){
     
 });
+
 subStartBtn.addEventListener("click", function(){
     ClearStart();
     
