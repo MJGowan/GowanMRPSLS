@@ -7,143 +7,117 @@ let fiveBtn = document.getElementById("fiveBtn");
 let sevenBtn = document.getElementById("sevenBtn");
 let subStartBtn = document.getElementById("subStartBtn");
 
+let replaceMe = document.getElementById("replaceMe");
+
+let cpuValue = false;
+let pvpValue = false;
+let oneValue = false;
+let fiveValue = false;
+let sevenValue = false;
+
+// function ClearStart(){
+//     startPage.innerHTML = "";
+// }
+
 navTitle.addEventListener("click", function(){
-    ClearStart();
+    open (url= "../index.html");
 });
 
 
 cpuBtn.addEventListener("click", function(){
-    cpuBtn == true;
-    pvpBtn == false;
+    cpuValue = true;
+    pvpValue = false;
 });
 pvpBtn.addEventListener("click", function(){
-    pvpBtn == true;
-    cpuBtn == false;
+    pvpValue = true;
+    cpuValue = false;
 });
 oneBtn.addEventListener("click", function(){
-    oneBtn == true;
-    fiveBtn == false;
-    sevenBtn == false;
+    oneValue = true;
+    fiveValue = false;
+    sevenValue = false;
 });
 fiveBtn.addEventListener("click", function(){
-    fiveBtn == true;
-    oneBtn == false;
-    sevenBtn == false;
+    fiveValue = true;
+    oneValue = false;
+    sevenValue = false;
 });
 sevenBtn.addEventListener("click", function(){
-    sevenBtn == true;
-    oneBtn == false;
-    fiveBtn == false;
+    sevenValue = true;
+    oneValue = false;
+    fiveValue = false;
 });
 
 subStartBtn.addEventListener("click", function(){
-    ClearStart();
-    
+    if(cpuValue == true && oneValue == true){
+        cpuOne();
+    }
+    else if(cpuValue == true && fiveValue == true){
+        cpuFive();
+    }
+    else if(cpuValue == true && sevenValue == true){
+        cpuSeven();
+    }
+    else if(pvpValue == true && oneValue == true){
+        pvpOne();
+    }
+    else if(pvpValue == true && fiveValue == true){
+        pvpFive();
+    }
+    else if(pvpValue == true && sevenValue == true){
+        pvpSeven();
+    }
 });
 
 
-function ClearStart(){
-    startPage.innerHTML = "";
-}
 
 
 function cpuOne(){
-    startPage.innerHTML = "";
-    let navA = document.createElement("a");
-    navA.id = "navTitle";
-    navA.className = "navbar-brand";
-    navA.href ="#";
-    navA.textContent = "RPSLS";
+    alert("i'm working!");
 
-    let navDiv = document.createElement("div");
-    navDiv.className = "container-fluid d-flex justify-content-center";
-    navDiv.appendChild(navA);
+    open (url="../pages/cpuOne.html");
 
-    let nav = document.createElement("nav");
-    nav.className = "navbar";
-    nav.appendChild(nav);
+    // let navA = document.createElement("a");
+    // navA.id = "navTitle";
+    // navA.className = "navbar-brand";
+    // navA.href ="#";
+    // navA.textContent = "RPSLS";
 
-    
+    // let navDiv = document.createElement("div");
+    // navDiv.className = "container-fluid d-flex justify-content-center";
+    // navDiv.appendChild(navA);
 
+    // let nav = document.createElement("nav");
+    // nav.className = "navbar";
+    // nav.appendChild(navDiv);
 }
 
 function cpuFive(){
-    let navA = document.createElement("a");
-    navA.id = "navTitle";
-    navA.className = "navbar-brand";
-    navA.href ="#";
-    navA.textContent = "RPSLS";
+    alert("i'm working!");
 
-    let navDiv = document.createElement("div");
-    navDiv.className = "container-fluid d-flex justify-content-center";
-    navDiv.appendChild(navA);
-
-    let nav = document.createElement("nav");
-    nav.className = "navbar";
-    nav.appendChild(nav);
-
+    open (url="../pages/cpuFive.html");
 }
 
 function cpuSeven(){
-    let navA = document.createElement("a");
-    navA.id = "navTitle";
-    navA.className = "navbar-brand";
-    navA.href ="#";
-    navA.textContent = "RPSLS";
+    alert("i'm working!");
 
-    let navDiv = document.createElement("div");
-    navDiv.className = "container-fluid d-flex justify-content-center";
-    navDiv.appendChild(navA);
-
-    let nav = document.createElement("nav");
-    nav.className = "navbar";
-    nav.appendChild(nav);
+    open (url="../pages/cpuSeven.html");
 }
 
 function pvpOne(){
-    let navA = document.createElement("a");
-    navA.id = "navTitle";
-    navA.className = "navbar-brand";
-    navA.href ="#";
-    navA.textContent = "RPSLS";
+    alert("i'm working!");
 
-    let navDiv = document.createElement("div");
-    navDiv.className = "container-fluid d-flex justify-content-center";
-    navDiv.appendChild(navA);
-
-    let nav = document.createElement("nav");
-    nav.className = "navbar";
-    nav.appendChild(nav);
+    open (url="../pages/pvpOne.html");
 }
 
 function pvpFive(){
-    let navA = document.createElement("a");
-    navA.id = "navTitle";
-    navA.className = "navbar-brand";
-    navA.href ="#";
-    navA.textContent = "RPSLS";
+    alert("i'm working!");
 
-    let navDiv = document.createElement("div");
-    navDiv.className = "container-fluid d-flex justify-content-center";
-    navDiv.appendChild(navA);
-
-    let nav = document.createElement("nav");
-    nav.className = "navbar";
-    nav.appendChild(nav);
+    open (url="../pages/pvpFive.html");
 }
 
 function pvpSeven(){
-    let navA = document.createElement("a");
-    navA.id = "navTitle";
-    navA.className = "navbar-brand";
-    navA.href ="#";
-    navA.textContent = "RPSLS";
+    alert("i'm working!");
 
-    let navDiv = document.createElement("div");
-    navDiv.className = "container-fluid d-flex justify-content-center";
-    navDiv.appendChild(navA);
-
-    let nav = document.createElement("nav");
-    nav.className = "navbar";
-    nav.appendChild(nav);
+    open (url="../pages/pvpSeven.html");
 }
