@@ -1,5 +1,10 @@
+@font-face {
+    font-family: Acme;
+    src: url("../assets/Acme-Regular.ttf");
+}
 body {
     background-image: url("../assets/s.jpg");
+    font-family:Acme;
 }
 
 .navbar {
@@ -107,4 +112,9 @@ body {
     margin-left:310px;
     background-color:#dde9ff;
     opacity:1%;
+}
+.scoreDiv{
+    color:#afb8cf;
+    font-size:x-large;
+    text-shadow: 1px 1px 1px #000, 2px 2px 1px #000, 3px 3px 1px #000, 4px 4px 1px #000, 5px 5px 1px #000;
 }
