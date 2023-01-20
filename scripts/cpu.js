@@ -174,7 +174,15 @@ function result() {
     if(victory == 1 || defeat == 1 || tie == 1){
         yourChoice = "X";
         cpuChoice = "X"
-        navTitle.innerText  = "THE END"
+        if(victory > defeat){
+            alert("You won!");
+        }
+        else if(victory < defeat){
+            alert("CPU won!")
+        }
+        else if(victory == defeat){
+            alert("It's a tie!")
+        }
     }
 
 };

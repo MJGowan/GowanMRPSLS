@@ -92,11 +92,9 @@ p2spock.addEventListener("click", function () {
 
 
 
-submitBtn.addEventListener("click", function(){
+submitBtn.addEventListener("click", function () {
     result();
 });
-
-
 
 function result() {
     if (p1Chose == "Rock") {
@@ -274,10 +272,18 @@ function result() {
     p1Choice.textContent = p1Chose;
     p2Choice.textContent = p2Chose;
 
-    if(p1victory == 1 || p1defeat == 1 || tie == 1){
-        p1Choice = "X";
-        p2Choice = "X"
-        navTitle.innerText  = "THE END"
+    if (p1victory == 1 || p1defeat == 1 || tie == 1) {
+        p1Chose = "X";
+        p2Chose = "X";
+        if (p1victory > p2victory) {
+            alert("Player 1 wins!");
+        }
+        else if (p1victory < p2victory) {
+            alert("Player 2 wins!");
+        }
+        else if (p1victory = p2victory) {
+            alert("It's a tie!");
+        }
     }
 
 };
