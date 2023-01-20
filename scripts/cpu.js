@@ -17,11 +17,9 @@ let draw = document.getElementById("draw");
 let yourChoice = document.getElementById("yourChoice");
 let cpuChoice = document.getElementById("cpuChoice");
 
-won = 0;
-lost = 0;
-draw;
-yourChoice = "";
-cpuChoice = "";
+let victory = 0;
+let defeat = 0;
+let tie = 0;
 
 let pickUrl = "";
 
@@ -33,29 +31,29 @@ let spock = document.getElementById("spock");
 
 
 rock.addEventListener("click", function () {
-    yourChoice = "rock";
+    yourChoice.innerText = "Rock";
     console.log("Your choice was rock");
-    pickApi()
+    pickApi();
 });
 paper.addEventListener("click", function () {
-    yourChoice.innerText = "paper";
+    yourChoice.innerText = "Paper";
     console.log("Your choice was paper");
-    pickApi()
+    pickApi();
 });
 scissors.addEventListener("click", function () {
-    yourChoice = "scissors";
+    yourChoice.innerText = "Scissors";
     console.log("Your choice was scissors");
-    pickApi()
+    pickApi();
 });
 lizard.addEventListener("click", function () {
-    yourChoice = "lizard";
+    yourChoice.innerText = "Lizard";
     console.log("Your choice was lizard");
-    pickApi()
+    pickApi();
 });
 spock.addEventListener("click", function () {
-    yourChoice = "spock";
+    yourChoice.innerText = "Spock";
     console.log("Your choice was spock");
-    pickApi()
+    pickApi();
 });
 
 function urlCall(url) {
@@ -63,8 +61,9 @@ function urlCall(url) {
         response => response.text()
     ).then(
         data => {
+            //cpuChoice = data;
             cpuChoice.textContent = data;
-            console.log(data);
+            console.log(cpuChoice.textContent);
         }
     )
 }
@@ -76,99 +75,106 @@ function pickApi() {
     }
 
 function result() {
-    if (yourChoice == "rock") {
+    if (yourChoice == "Rock") {
         switch (cpuChoice) {
             case "rock":
-                draw++;
+                tie++;
                 break;
             case "paper":
-                lost++;
+                defeat++;
                 break;
             case "scissors":
-                won++;
+                victory++;
                 break;
             case "lizard":
-                won++;
+                victory++;
                 break;
             case "spock":
-                lost++;
+                defeat++;
                 break;
         }
     }
-    if (yourChoice == "paper") {
+    if (yourChoice == "Paper") {
         switch (cpuChoice) {
             case "rock":
-                won++;
+                victory++;
                 break;
             case "paper":
-                draw++;
+                tie++;
                 break;
             case "scissors":
-                lost++;
+                defeat++;
                 break;
             case "lizard":
-                lost++;
+                defeat++;
                 break;
             case "spock":
-                won++;
+                victory++;
                 break;
         }
     }
-    if (yourChoice == "scissors") {
+    if (yourChoice == "Scissors") {
         switch (cpuChoice) {
             case "rock":
-                won++;
+                victory++;
                 break;
             case "paper":
-                lost++;
+                defeat++;
                 break;
             case "scissors":
-                draw++;
+                tie++;
                 break;
             case "lizard":
-                won++;
+                victory++;
                 break;
             case "spock":
-                lost++;
+                defeat++;
                 break;
         }
     }
-    if (yourChoice == "lizard") {
+    if (yourChoice == "Lizard") {
         switch (cpuChoice) {
             case "rock":
-                lost++;
+                defeat++;
                 break;
             case "paper":
-                won++;
+                victory++;
                 break;
             case "scissors":
-                lost++;
+                defeat++;
                 break;
             case "lizard":
-                draw++;
+                tie++;
                 break;
             case "spock":
-                won++;
+                victory++;
                 break;
         }
     }
-    if (yourChoice == "spock") {
-        switch (cpuChoice) {
-            case "rock":
-                won++;
+    if (yourChoice == "Spock") {
+        switch (cpuChoice.textContent) {
+            case "Rock":
+                console.log("rude");
+                victory++;
                 break;
-            case "paper":
-                lost++;
+            case "Paper":
+                defeat++;
                 break;
-            case "scissors":
-                won++;
+            case "Scissors":
+                victory++;
                 break;
-            case "lizard":
-                lost++;
+            case "Lizard":
+                defeat++;
                 break;
-            case "spock":
-                draw++;
+            case "Spock":
+                tie++;
                 break;
         }
     }
+
+    console.log("i'm working");
+    won.textContent = victory;
+    lost.textContent = defeat;
+    draw.textContent = tie;
+
 };
