@@ -75,83 +75,83 @@ function pickApi() {
     }
 
 function result() {
-    if (yourChoice == "Rock") {
-        switch (cpuChoice) {
-            case "rock":
+    if (yourChoice.textContent == "Rock") {
+        switch (cpuChoice.textContent) {
+            case "Rock":
                 tie++;
                 break;
-            case "paper":
+            case "Paper":
                 defeat++;
                 break;
-            case "scissors":
+            case "Scissors":
                 victory++;
                 break;
-            case "lizard":
+            case "Lizard":
                 victory++;
                 break;
-            case "spock":
+            case "Spock":
                 defeat++;
                 break;
         }
     }
-    if (yourChoice == "Paper") {
-        switch (cpuChoice) {
-            case "rock":
+    if (yourChoice.textContent == "Paper") {
+        switch (cpuChoice.textContent) {
+            case "Rock":
                 victory++;
                 break;
-            case "paper":
+            case "Paper":
                 tie++;
                 break;
-            case "scissors":
+            case "Scissors":
                 defeat++;
                 break;
-            case "lizard":
+            case "Lizard":
                 defeat++;
                 break;
-            case "spock":
+            case "Spock":
                 victory++;
                 break;
         }
     }
-    if (yourChoice == "Scissors") {
-        switch (cpuChoice) {
-            case "rock":
+    if (yourChoice.textContent == "Scissors") {
+        switch (cpuChoice.textContent) {
+            case "Rock":
                 victory++;
                 break;
-            case "paper":
+            case "Paper":
                 defeat++;
                 break;
-            case "scissors":
+            case "Scissors":
                 tie++;
                 break;
-            case "lizard":
+            case "Lizard":
                 victory++;
                 break;
-            case "spock":
+            case "Spock":
                 defeat++;
                 break;
         }
     }
-    if (yourChoice == "Lizard") {
-        switch (cpuChoice) {
-            case "rock":
+    if (yourChoice.textContent == "Lizard") {
+        switch (cpuChoice.textContent) {
+            case "Rock":
                 defeat++;
                 break;
-            case "paper":
+            case "Paper":
                 victory++;
                 break;
-            case "scissors":
+            case "Scissors":
                 defeat++;
                 break;
-            case "lizard":
+            case "Lizard":
                 tie++;
                 break;
-            case "spock":
+            case "Spock":
                 victory++;
                 break;
         }
     }
-    if (yourChoice == "Spock") {
+    if (yourChoice.textContent == "Spock") {
         switch (cpuChoice.textContent) {
             case "Rock":
                 console.log("rude");
@@ -172,7 +172,7 @@ function result() {
         }
     }
 
-    console.log("i'm working");
+    console.log(victory);
     won.textContent = victory;
     lost.textContent = defeat;
     draw.textContent = tie;
