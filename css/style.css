@@ -69,6 +69,7 @@ body {
     margin-left:650px;
     background-color:#efd2d2;
     opacity:50%;
+    border-color:transparent;
 }
 
 .paperBtn {
@@ -80,6 +81,7 @@ body {
     margin-left:725px;
     background-color:#fffddd;
     opacity:50%;
+    border-color:transparent;
 }
 
 .scissorsBtn {
@@ -91,6 +93,7 @@ body {
     margin-left:512px;
     background-color:#fed3ff;
     opacity:50%;
+    border-color:transparent;
 }
 
 .lizardBtn {
@@ -102,6 +105,7 @@ body {
     margin-left:390px;
     background-color:#d5f1d5;
     opacity:50%;
+    border-color:transparent;
 }
 
 .spockBtn {
@@ -113,9 +117,138 @@ body {
     margin-left:310px;
     background-color:#dde9ff;
     opacity:50%;
+    border-color:transparent;
 }
 .scoreDiv{
     color:#afb8cf;
     font-size:x-large;
     text-shadow: 1px 1px 1px #000, 2px 2px 1px #000, 3px 3px 1px #000, 4px 4px 1px #000, 5px 5px 1px #000;
+}
+
+
+
+
+
+.p1rockBtn {
+    position:absolute;
+    height: 170px;
+    width: 170px;
+    border-radius: 100px;
+    margin-top:-208px;
+    margin-left:324px;
+    background-color:#efd2d2;
+    opacity:50%;
+    border-color:transparent;
+}
+
+.p1paperBtn {
+    position:absolute;
+    height: 170px;
+    width: 170px;
+    border-radius: 100px;
+    margin-top:-435px;
+    margin-left:390px;
+    background-color:#fffddd;
+    opacity:50%;
+    border-color:transparent;
+}
+
+.p1scissorsBtn {
+    position:absolute;
+    height: 170px;
+    width: 170px;
+    border-radius: 100px;
+    margin-top:-570px;
+    margin-left:200px;
+    background-color:#fed3ff;
+    opacity:50%;
+    border-color:transparent;
+}
+
+.p1lizardBtn {
+    position:absolute;
+    height: 170px;
+    width: 170px;
+    border-radius: 100px;
+    margin-top:-200px;
+    margin-left:90px;
+    background-color:#d5f1d5;
+    opacity:50%;
+    border-color:transparent;
+}
+
+.p1spockBtn {
+    position:absolute;
+    height: 170px;
+    width: 170px;
+    border-radius: 100px;
+    margin-top:-430px;;
+    margin-left:15px;
+    background-color:#dde9ff;
+    opacity:50%;
+    border-color:transparent;
+}
+
+
+
+
+
+.p2rockBtn {
+    position:absolute;
+    height: 170px;
+    width: 170px;
+    border-radius: 100px;
+    margin-top:-208px;
+    margin-left:965px;
+    background-color:#efd2d2;
+    opacity:50%;
+    border-color:transparent;
+}
+
+.p2paperBtn {
+    position:absolute;
+    height: 170px;
+    width: 170px;
+    border-radius: 100px;
+    margin-top:-435px;
+    margin-left:1030px;
+    background-color:#fffddd;
+    opacity:50%;
+    border-color:transparent;
+}
+
+.p2scissorsBtn {
+    position:absolute;
+    height: 170px;
+    width: 170px;
+    border-radius: 100px;
+    margin-top:-570px;
+    margin-left:840px;
+    background-color:#fed3ff;
+    opacity:50%;
+    border-color:transparent;
+}
+
+.p2lizardBtn {
+    position:absolute;
+    height: 170px;
+    width: 170px;
+    border-radius: 100px;
+    margin-top:-200px;
+    margin-left:725px;
+    background-color:#d5f1d5;
+    opacity:50%;
+    border-color:transparent;
+}
+
+.p2spockBtn {
+    position:absolute;
+    height: 170px;
+    width: 170px;
+    border-radius: 100px;
+    margin-top:-430px;
+    margin-left:650px;
+    background-color:#dde9ff;
+    opacity:50%;
+    border-color:transparent;
 }

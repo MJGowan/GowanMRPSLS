@@ -1,12 +1,6 @@
 let cpuOnePage = document.getElementById("cpuOnePage");
 let navTitle = document.getElementById("navTitle");
 
-let cpuValue = false;
-let pvpValue = false;
-let oneValue = false;
-let fiveValue = false;
-let sevenValue = false;
-
 navTitle.addEventListener("click", function () {
     open(url = "../index.html");
 });

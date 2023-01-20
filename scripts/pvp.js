@@ -1,187 +1,283 @@
-let cpuOnePage = document.getElementById("cpuOnePage");
+let pvpOnePage = document.getElementById("pvpOnePage");
 let navTitle = document.getElementById("navTitle");
-
-let cpuValue = false;
-let pvpValue = false;
-let oneValue = false;
-let fiveValue = false;
-let sevenValue = false;
 
 navTitle.addEventListener("click", function () {
     open(url = "../index.html");
 });
 
-let won = document.getElementById("won");
-let lost = document.getElementById("lost");
+let p1won = document.getElementById("p1won");
+let p1lost = document.getElementById("p1lost");
+let p2won = document.getElementById("p2won")
+let p2lost = document.getElementById("p2lost");
 let draw = document.getElementById("draw");
-let yourChoice = document.getElementById("yourChoice");
-let cpuChoice = document.getElementById("cpuChoice");
+let p1Choice = document.getElementById("p1Choice");
+let p1Chose = "";
+let p2Choice = document.getElementById("p2Choice");
+let p2Chose = "";
 
-let victory = 0;
-let defeat = 0;
+let submitBtn = document.getElementById("submitBtn");
+
+let p1victory = 0;
+let p1defeat = 0;
+let p2victory = 0;
+let p2defeat = 0;
 let tie = 0;
 
-let pickUrl = "";
+let p1rock = document.getElementById("p1rock");
+let p1paper = document.getElementById("p1paper");
+let p1scissors = document.getElementById("p1scissors");
+let p1lizard = document.getElementById("p1lizard");
+let p1spock = document.getElementById("p1spock");
 
-let rock = document.getElementById("rock");
-let paper = document.getElementById("paper");
-let scissors = document.getElementById("scissors");
-let lizard = document.getElementById("lizard");
-let spock = document.getElementById("spock");
+let p2rock = document.getElementById("p2rock");
+let p2paper = document.getElementById("p2paper");
+let p2scissors = document.getElementById("p2scissors");
+let p2lizard = document.getElementById("p2lizard");
+let p2spock = document.getElementById("p2spock");
 
 
-rock.addEventListener("click", function () {
-    yourChoice.innerText = "Rock";
-    console.log("Your choice was rock");
-    pickApi();
+p1rock.addEventListener("click", function () {
+    //p1Choice.innerText = "Rock";
+    p1Chose = "Rock";
+    console.log("Player 1 has made their choice");
 });
-paper.addEventListener("click", function () {
-    yourChoice.innerText = "Paper";
-    console.log("Your choice was paper");
-    pickApi();
+p1paper.addEventListener("click", function () {
+    //p1Choice.innerText = "Paper";
+    p1Chose = "Paper";
+    console.log("Player 1 has made their choice");
 });
-scissors.addEventListener("click", function () {
-    yourChoice.innerText = "Scissors";
-    console.log("Your choice was scissors");
-    pickApi();
+p1scissors.addEventListener("click", function () {
+    //p1Choice.innerText = "Scissors";
+    p1Chose = "Scissors";
+    console.log("Player 1 has made their choice");
 });
-lizard.addEventListener("click", function () {
-    yourChoice.innerText = "Lizard";
-    console.log("Your choice was lizard");
-    pickApi();
+p1lizard.addEventListener("click", function () {
+    //p1Choice.innerText = "Lizard";
+    p1Chose = "Lizard";
+    console.log("Player 1 has made their choice");
 });
-spock.addEventListener("click", function () {
-    yourChoice.innerText = "Spock";
-    console.log("Your choice was spock");
-    pickApi();
+p1spock.addEventListener("click", function () {
+    //p1Choice.innerText = "Spock";
+    p1Chose = "Spock";
+    console.log("Player 1 has made their choice");
 });
 
-function urlCall(url) {
-    fetch(url).then(
-        response => response.text()
-    ).then(
-        data => {
-            //cpuChoice = data;
-            cpuChoice.textContent = data;
-            console.log(cpuChoice.textContent);
-        }
-    )
-}
 
-function pickApi() {
-        pickUrl = "https://scottsrpsls.azurewebsites.net/api/RockPaperScissors/GetRandomOption";
-        urlCall(pickUrl);
-        result();
-    }
+
+p2rock.addEventListener("click", function () {
+    //p2Choice.innerText = "Rock";
+    p2Chose = "Rock";
+    console.log("Player 2 has made their choice");
+});
+p2paper.addEventListener("click", function () {
+    //p2Choice.innerText = "Paper";
+    p2Chose = "Paper";
+    console.log("Player 2 has made their choice");
+});
+p2scissors.addEventListener("click", function () {
+    //p2Choice.innerText = "Scissors";
+    p2Chose = "Scissors"
+    console.log("Player 2 has made their choice");
+});
+p2lizard.addEventListener("click", function () {
+    //p2Choice.innerText = "Lizard";
+    p2Chose = "Lizard";
+    console.log("Player 2 has made their choice");
+});
+p2spock.addEventListener("click", function () {
+    //p2Choice.innerText = "Spock";
+    p2Chose = "Spock";
+    console.log("Player 2 has made their choice");
+});
+
+
+
+submitBtn.addEventListener("click", function(){
+    result();
+});
+
+
 
 function result() {
-    if (yourChoice.textContent == "Rock") {
-        switch (cpuChoice.textContent) {
+    if (p1Chose == "Rock") {
+        switch (p2Chose) {
             case "Rock":
+                console.log("Player 1 chose rock");
+                console.log("Player 2 chose rock");
                 tie++;
                 break;
             case "Paper":
-                defeat++;
+                console.log("Player 1 chose rock");
+                console.log("Player 2 chose paper");
+                p1defeat++;
+                p2victory++;
                 break;
             case "Scissors":
-                victory++;
+                console.log("Player 1 chose rock");
+                console.log("Player 2 chose scissors");
+                p1victory++;
+                p2defeat++;
                 break;
             case "Lizard":
-                victory++;
+                console.log("Player 1 chose rock");
+                console.log("Player 2 chose lizard");
+                p1victory++;
+                p2defeat++;
                 break;
             case "Spock":
-                defeat++;
+                console.log("Player 1 chose rock");
+                console.log("Player 2 chose spock");
+                p1defeat++;
+                p2victory++;
                 break;
         }
     }
-    if (yourChoice.textContent == "Paper") {
-        switch (cpuChoice.textContent) {
+    if (p1Chose == "Paper") {
+        switch (p2Chose) {
             case "Rock":
-                victory++;
+                console.log("Player 1 chose paper");
+                console.log("Player 2 chose rock");
+                p1victory++;
+                p2defeat++;
                 break;
             case "Paper":
+                console.log("Player 1 chose paper");
+                console.log("Player 2 chose paper");
                 tie++;
                 break;
             case "Scissors":
-                defeat++;
+                console.log("Player 1 chose paper");
+                console.log("Player 2 chose scissors");
+                p1defeat++;
+                p2victory++;
                 break;
             case "Lizard":
-                defeat++;
+                console.log("Player 1 chose paper");
+                console.log("Player 2 chose lizard");
+                p1defeat++;
+                p2victory++;
                 break;
             case "Spock":
-                victory++;
+                console.log("Player 1 chose paper");
+                console.log("Player 2 chose spock");
+                p1victory++;
+                p2defeat++;
                 break;
         }
     }
-    if (yourChoice.textContent == "Scissors") {
-        switch (cpuChoice.textContent) {
+    if (p1Chose == "Scissors") {
+        switch (p2Chose) {
             case "Rock":
-                victory++;
+                console.log("Player 1 chose scissors");
+                console.log("Player 2 chose rock");
+                p1victory++;
+                p2defeat++;
                 break;
             case "Paper":
-                defeat++;
+                console.log("Player 1 chose scissors");
+                console.log("Player 2 chose paper");
+                p1defeat++;
+                p2victory++;
                 break;
             case "Scissors":
+                console.log("Player 1 chose scissors");
+                console.log("Player 2 chose scissors");
                 tie++;
                 break;
             case "Lizard":
-                victory++;
+                console.log("Player 1 chose scissors");
+                console.log("Player 2 chose lizard");
+                p1victory++;
+                p2defeat++;
                 break;
             case "Spock":
-                defeat++;
+                console.log("Player 1 chose scissors");
+                console.log("Player 2 chose spock");
+                p1defeat++;
+                p2victory++;
                 break;
         }
     }
-    if (yourChoice.textContent == "Lizard") {
-        switch (cpuChoice.textContent) {
+    if (p1Chose == "Lizard") {
+        switch (p2Chose) {
             case "Rock":
-                defeat++;
+                console.log("Player 1 chose lizard");
+                console.log("Player 2 chose rock");
+                p1defeat++;
+                p2victory++;
                 break;
             case "Paper":
-                victory++;
+                console.log("Player 1 chose lizard");
+                console.log("Player 2 chose paper");
+                p1victory++;
+                p2defeat++;
                 break;
             case "Scissors":
-                defeat++;
+                console.log("Player 1 chose lizard");
+                console.log("Player 2 chose scissors");
+                p1defeat++;
+                p2victory++;
                 break;
             case "Lizard":
+                console.log("Player 1 chose lizard");
+                console.log("Player 2 chose lizard");
                 tie++;
                 break;
             case "Spock":
-                victory++;
+                console.log("Player 1 chose lizard");
+                console.log("Player 2 chose spock");
+                p1victory++;
+                p2defeat++;
                 break;
         }
     }
-    if (yourChoice.textContent == "Spock") {
-        switch (cpuChoice.textContent) {
+    if (p1Chose == "Spock") {
+        switch (p2Chose) {
             case "Rock":
-                console.log("rude");
-                victory++;
+                console.log("Player 1 chose spock");
+                console.log("Player 2 chose rock");
+                p1victory++;
+                p2defeat++;
                 break;
             case "Paper":
-                defeat++;
+                console.log("Player 1 chose spock");
+                console.log("Player 2 chose paper");
+                p1defeat++;
+                p2victory++;
                 break;
             case "Scissors":
-                victory++;
+                console.log("Player 1 chose spock");
+                console.log("Player 2 chose scissors");
+                p1victory++;
+                p2defeat++;
                 break;
             case "Lizard":
-                defeat++;
+                console.log("Player 1 chose spock");
+                console.log("Player 2 chose lizard");
+                p1defeat++;
+                p2victory++;
                 break;
             case "Spock":
+                console.log("Player 1 chose spock");
+                console.log("Player 2 chose spock");
                 tie++;
                 break;
         }
     }
 
-    console.log(victory);
-    won.textContent = victory;
-    lost.textContent = defeat;
+    p1won.textContent = p1victory;
+    p1lost.textContent = p1defeat;
+    p2won.textContent = p2victory;
+    p2lost.textContent = p2defeat;
     draw.textContent = tie;
 
-    if(victory == 1 || defeat == 1 || tie == 1){
-        yourChoice = "X";
-        cpuChoice = "X"
+    p1Choice.textContent = p1Chose;
+    p2Choice.textContent = p2Chose;
+
+    if(p1victory == 1 || p1defeat == 1 || tie == 1){
+        p1Choice = "X";
+        p2Choice = "X"
         navTitle.innerText  = "THE END"
     }
 
 };
-
