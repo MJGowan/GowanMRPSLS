@@ -177,11 +177,10 @@ function result() {
     lost.textContent = defeat;
     draw.textContent = tie;
 
-    if(victory == 1 || defeat == 1 || tie == 1){
+    if(victory + defeat + tie >= 5){
         yourChoice = "X";
         cpuChoice = "X"
         navTitle.innerText  = "THE END"
     }
 
 };
-
